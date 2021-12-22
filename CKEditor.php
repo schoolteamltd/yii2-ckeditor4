@@ -87,6 +87,8 @@ class CKEditor extends InputWidget{
             $options['removePlugins'] = 'sourcearea';
         }
 
+        $options['extraPlugins'] = 'html5video,widget,widgetselection,clipboard,lineutils' . (isset($options['extraPlugins']) ? ','.$options['extraPlugins'] : '');
+
         $this->editorOptions = ArrayHelper::merge($options, $this->editorOptions);
     }
 
@@ -114,6 +116,8 @@ class CKEditor extends InputWidget{
             $options['extraPlugins'] = 'sourcedialog';
             $options['removePlugins'] = 'sourcearea';
         }
+
+        $options['extraPlugins'] = 'html5video,widget,widgetselection,clipboard,lineutils' . (isset($options['extraPlugins']) ? ','.$options['extraPlugins'] : '');
 
         $this->editorOptions = ArrayHelper::merge($options, $this->editorOptions);
     }
@@ -158,4 +162,4 @@ class CKEditor extends InputWidget{
         }
     }
 
-} 
+}
